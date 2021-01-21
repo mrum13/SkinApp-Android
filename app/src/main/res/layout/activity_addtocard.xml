@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Addtocard">
+
+    <ImageView
+        android:id="@+id/addtocard"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:src="@drawable/ic_checkoutt_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="210dp"/>
+
+    <TextView
+        android:id="@+id/prodaddtocard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/addtocard"
+        android:layout_marginTop="36dp"
+        android:text="Product added to card"
+        android:textSize="24sp"
+        android:textColor="#000"/>
+
+    <Button
+        android:id="@+id/btn_backToShopping"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"
+        android:layout_below="@id/prodaddtocard"
+        android:elevation="30dp"
+        android:text="Back to shopping"
+        android:paddingBottom="10dp"
+        android:background="#40BFFF"
+        android:textColor="#FFFFFF"/>
+
+</RelativeLayout>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.FragAccountInfo">
+
+    <include
+        android:id="@+id/toolbaraccountinfo"
+        layout="@layout/toolbaraccountinfo"/>
+
+    <TextView
+        android:id="@+id/account_inf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbaraccountinfo"
+        android:layout_marginTop="23dp"
+        android:textSize="24dp"
+        android:textColor="#000"
+        android:paddingLeft="16dp"
+        android:text="Account Information"
+        />
+
+    <!-- User name -->
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_below="@+id/account_inf"
+        android:layout_marginTop="21dp"
+        android:text="User name"
+        android:textColor="#000"
+        android:textSize="18dp"
+        android:paddingLeft="43dp"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/jasmine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:layout_marginTop="4dp"
+        android:text="@string/muhm"
+        android:textAppearance="@style/muhm"
+        android:textSize="16dp"
+        android:paddingLeft="43dp"
+        android:gravity="top"
+        />
+
+    <!-- Line -->
+    <View
+        android:id="@+id/line1x"
+        android:layout_width="305dp"
+        android:layout_height="4dp"
+        android:layout_below="@+id/jasmine"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="24dp"
+        android:background="@drawable/garis2"
+        />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1x"
+        android:layout_marginTop="15dp"
+        android:text="Email"
+        android:textColor="#000"
+        android:textSize="18dp"
+        android:paddingLeft="43dp"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/jasmine_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email"
+        android:layout_marginTop="4dp"
+        android:text="@string/muhm_ad"
+        android:textAppearance="@style/muhm_ad"
+        android:textColor="#0001FC"
+        android:textSize="16dp"
+        android:paddingLeft="43dp"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/change2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/jasmine"
+        android:layout_marginTop="47dp"
+        android:text="Change"
+        android:textColor="#A7A9BE"
+        android:textSize="12dp"
+        android:paddingLeft="314dp"
+        android:gravity="right|top"/>
+
+    <!-- Line -->
+    <View
+        android:id="@+id/line2x"
+        android:layout_width="305dp"
+        android:layout_height="4dp"
+        android:layout_below="@+id/jasmine_email"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="24dp"
+        android:background="@drawable/garis2"
+        />
+
+    <TextView
+        android:id="@+id/phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line2x"
+        android:layout_marginTop="15dp"
+        android:text="Phone Number"
+        android:textColor="#000"
+        android:textSize="18dp"
+        android:paddingLeft="43dp"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phonenumber"
+        android:layout_marginTop="4dp"
+        android:text="@string/phone085"
+        android:textAppearance="@style/phone085"
+        android:textSize="16dp"
+        android:paddingLeft="43dp"
+        android:gravity="top"
+        />
+
+    <!-- Line -->
+    <View
+        android:id="@+id/line3x"
+        android:layout_width="305dp"
+        android:layout_height="4dp"
+        android:layout_below="@+id/number"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="24dp"
+        android:background="@drawable/garis2"
+        />
+
+    <TextView
+        android:id="@+id/passaccountinf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line3x"
+        android:layout_marginTop="15dp"
+        android:text="Password"
+        android:textColor="#000"
+        android:textSize="18dp"
+        android:paddingLeft="43dp"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passaccountinf"
+        android:layout_marginTop="4dp"
+        android:text="@string/pass"
+        android:textAppearance="@style/pass"
+        android:textSize="16dp"
+        android:paddingLeft="43dp"
+        android:gravity="top"
+        />
+
+    <!-- Line -->
+    <View
+        android:id="@+id/line4x"
+        android:layout_width="305dp"
+        android:layout_height="4dp"
+        android:layout_below="@+id/pass"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="24dp"
+        android:background="@drawable/garis2"
+        />
+
+
+    <TextView
+        android:id="@+id/alamataccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line4x"
+        android:layout_marginTop="15dp"
+        android:text="Alamat"
+        android:textColor="#000"
+        android:textSize="18dp"
+        android:paddingLeft="43dp"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/almakun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alamataccount"
+        android:layout_marginTop="4dp"
+        android:text="@string/alamatakun"
+        android:textAppearance="@style/alamatakun"
+        android:textSize="16dp"
+        android:paddingLeft="43dp"
+        />
+
+    <!-- Line -->
+    <View
+        android:id="@+id/line5x"
+        android:layout_width="305dp"
+        android:layout_height="4dp"
+        android:layout_below="@+id/almakun"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="24dp"
+        android:background="@drawable/garis2"
+        />
+
+    <TextView
+        android:id="@+id/kodps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line5x"
+        android:layout_marginTop="15dp"
+        android:text="Kode Pos"
+        android:textColor="#000"
+        android:textSize="18dp"
+        android:paddingLeft="43dp"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/kodps1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kodps"
+        android:layout_marginTop="4dp"
+        android:text="@string/kdpos"
+        android:textAppearance="@style/kdpos"
+        android:textSize="16dp"
+        android:paddingLeft="43dp"
+        />
+
+    <!-- Line -->
+    <View
+        android:id="@+id/line6x"
+        android:layout_width="305dp"
+        android:layout_height="4dp"
+        android:layout_below="@+id/kodps1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="24dp"
+        android:background="@drawable/garis2"
+        />
+
+
+
+
+</RelativeLayout>

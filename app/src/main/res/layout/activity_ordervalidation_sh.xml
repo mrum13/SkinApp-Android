@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#40BFFF"
+    tools:context=".Ordervalidation">
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_width="197dp"
+        android:layout_height="183dp"
+        android:src="@drawable/circlevalid" />
+
+    <ImageView
+       android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:layout_width="162dp"
+        android:layout_height="120dp"
+        android:src="@drawable/cekvalid" />
+
+    <!--    <View-->
+<!--        android:id="@+id/bagvalid1"-->
+<!--        android:layout_width="90dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_marginLeft="170dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginTop="280dp"-->
+<!--        android:background="@drawable/circlevalid3"-->
+<!--        android:elevation="24dp"-->
+<!--        />-->
+
+<!--    <View-->
+<!--        android:id="@+id/bagvalid2"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="5dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_marginLeft="124dp"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginRight="124dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginTop="250dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="270dp"-->
+<!--        android:background="@drawable/circlevalid2"-->
+<!--        />-->
+
+<!--    <View-->
+<!--        android:id="@+id/bagvalid2"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="5dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_marginLeft="110dp"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginRight="124dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginTop="250dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="270dp"-->
+<!--        android:background="@drawable/circlevalid"-->
+<!--        />-->
+
+
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Productpage">
+
+    <include
+        android:id="@+id/toolbarprodpage"
+        layout="@layout/toolbarprodpage"/>
+
+    <TextView
+        android:id="@+id/merk_produk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@+id/toolbarprodpage"
+        android:text="Nama Merk"
+        android:textSize="24sp"
+        android:fontFamily="arial"
+        />
+
+    <TextView
+        android:id="@+id/newprogpag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/merk_produk"
+        android:layout_marginTop="42dp"
+        android:layout_marginLeft="54dp"
+        android:text="New"
+        android:textColor="#1F53E4"
+        android:background="#E0ECF8"
+        android:gravity="top"
+        />
+
+    <ImageView
+        android:id="@+id/gambar_produk"
+        android:layout_width="match_parent"
+        android:layout_height="228dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="50dp"
+        android:layout_below="@id/newprogpag"
+        android:layout_marginTop="6dp"
+        android:scaleType="fitXY"/>
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/coloor"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@id/color"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginLeft="115dp"-->
+    <!--        android:text="Original"-->
+    <!--        android:textSize="18sp"-->
+    <!--        android:textColor="#63181819"-->
+    <!--        android:gravity="top"-->
+    <!--        />-->
+
+    <TextView
+        android:id="@+id/nama_produk_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gambar_produk"
+        android:layout_marginTop="32dp"
+        android:paddingHorizontal="50dp"
+        android:gravity="top"
+        android:text="Nama Produk"
+        android:textAppearance="@style/desc"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/deskripsi_produk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nama_produk_detail"
+        android:paddingHorizontal="50dp"
+        android:gravity="top"
+        android:layout_marginTop="12dp"
+        android:text="Deskripsi Produk"
+        android:textAppearance="@style/desc"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_harga_produk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deskripsi_produk"
+        android:layout_marginLeft="50dp"
+        android:gravity="top"
+        android:text="Harga : "
+        android:layout_marginTop="12dp"
+        android:textAppearance="@style/desc"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/rp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deskripsi_produk"
+        android:gravity="top"
+        android:text="Rp. "
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@id/tv_harga_produk"
+        android:textAppearance="@style/desc"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/harga_produk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deskripsi_produk"
+        android:gravity="top"
+        android:text="-"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@id/rp"
+        android:textAppearance="@style/desc"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_addtocart"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginHorizontal="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:background="#40BFFF"
+        android:text="Add to cart"
+        android:textColor="#FFFF"/>
+
+</RelativeLayout>

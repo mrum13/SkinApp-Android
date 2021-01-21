@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "420839501903",
+    "firebase_url": "https://skinapp-7f13f.firebaseio.com",
+    "project_id": "skinapp-7f13f",
+    "storage_bucket": "skinapp-7f13f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420839501903:android:a9c7226c1a7f71abbefa3a",
+        "android_client_info": {
+          "package_name": "com.example.projskinapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420839501903-5cr1nb0bpjs6420o4rq2h015bpu8g9ar.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.projskinapp",
+            "certificate_hash": "22bf2e742f2d087982bc0fbbd45af8a995760636"
+          }
+        },
+        {
+          "client_id": "420839501903-gk00u6elu9ub6tetj5gm2fs8f87imff5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBeYIpfTvN7IQjyOhVjPUlly06RHPq5hk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420839501903-gk00u6elu9ub6tetj5gm2fs8f87imff5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

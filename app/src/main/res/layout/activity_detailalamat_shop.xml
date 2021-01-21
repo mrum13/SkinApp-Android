@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Detailalamat">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/barmadetailalamat"
+        layout="@layout/barmyorder"/>
+
+    <TextView
+        android:id="@+id/txdetailalmat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/barmadetailalamat"
+        android:layout_marginTop="23dp"
+        android:textSize="24dp"
+        android:textColor="#000"
+        android:layout_marginLeft="16dp"
+        android:text="Alamat"
+        />
+
+    <TextView
+        android:id="@+id/rumah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rumah"
+        android:textAppearance="@style/rumah"
+        android:layout_below="@+id/txdetailalmat"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        />
+
+    <!-- Line -->
+    <View
+        android:id="@+id/line"
+        android:layout_width="305dp"
+        android:layout_height="4dp"
+        android:layout_below="@+id/rumah"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        android:background="@drawable/garis2"
+        />
+
+    <TextView
+        android:id="@+id/nmdetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nama"
+        android:textAppearance="@style/nama"
+        android:layout_below="@+id/line"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/muh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/muh"
+        android:textAppearance="@style/muh"
+        android:layout_below="@+id/nmdetail"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="26dp"
+        />
+
+    <!-- Line -->
+    <View
+        android:id="@+id/line1"
+        android:layout_width="305dp"
+        android:layout_height="4dp"
+        android:layout_below="@+id/muh"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        android:background="@drawable/garis2"
+        />
+
+    <TextView
+        android:id="@+id/almdetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/detailalm"
+        android:textAppearance="@style/detailalm"
+        android:layout_below="@+id/line1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/alamatdet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alamatdetail"
+        android:textAppearance="@style/alamatdetail"
+        android:layout_below="@+id/almdetail"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="26dp"
+        />
+
+    <!-- Line -->
+    <View
+        android:id="@+id/line2"
+        android:layout_width="305dp"
+        android:layout_height="4dp"
+        android:layout_below="@+id/alamatdet"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        android:background="@drawable/garis2"
+        />
+
+    <TextView
+        android:id="@+id/kodpos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kodepos"
+        android:textAppearance="@style/kodepos"
+        android:layout_below="@+id/line2"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/kdpos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kdpos11"
+        android:textAppearance="@style/kdpos11"
+        android:layout_below="@+id/kodpos"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="26dp"
+        />
+
+    <!-- Line -->
+    <View
+        android:id="@+id/line3"
+        android:layout_width="305dp"
+        android:layout_height="4dp"
+        android:layout_below="@+id/kdpos"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        android:background="@drawable/garis2"
+        />
+
+    <TextView
+        android:id="@+id/nopepenerima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nopenerima"
+        android:textAppearance="@style/nopenerima"
+        android:layout_below="@+id/line3"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/nopepenerima1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nope085"
+        android:textAppearance="@style/nope085"
+        android:layout_below="@+id/nopepenerima"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="26dp"
+        />
+
+    <!-- Line -->
+    <View
+        android:id="@+id/line4"
+        android:layout_width="305dp"
+        android:layout_height="4dp"
+        android:layout_below="@+id/nopepenerima1"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        android:background="@drawable/garis2"
+        />
+
+    </RelativeLayout>
+
+</ScrollView>

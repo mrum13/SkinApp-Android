@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    tools:context=".fragment.FragmentAccount"
+    android:id="@+id/fragaccount">
+
+    <!-- Account -->
+    <TextView
+        android:id="@+id/account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="7dp"
+        android:text="Account"
+        android:textSize="32dp"
+        android:textColor="#000"
+        android:gravity="top"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/item_photo"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/account"
+        android:layout_marginTop="25dp"
+        tools:src="@android:color/darker_gray" />
+
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/account"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="80dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="Jasmine" />
+
+        <TextView
+            android:id="@+id/tipeanggota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:paddingLeft="80dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="Premium Member"
+            android:textSize="16sp"
+            />
+
+    <Button
+        android:id="@+id/orders"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@id/item_photo"
+        android:layout_marginTop="43dp"
+        android:background="#FFFFFF"
+        android:text="Orders"
+        android:paddingLeft="16dp"
+        android:textAlignment="textStart"
+        android:layout_gravity="start"
+        android:drawablePadding="65dp"/>
+
+<!--    <Button-->
+<!--        android:id="@+id/returns"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="54dp"-->
+<!--        android:layout_below="@id/orders"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:background="#FFFFFF"-->
+<!--        android:text="Returns"-->
+<!--        android:paddingLeft="16dp"-->
+<!--        android:textAlignment="textStart"-->
+<!--        android:layout_gravity="start"-->
+<!--        android:drawablePadding="65dp"/>-->
+
+    <Button
+        android:id="@+id/accountinformation"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@id/orders"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:text="Account Information"
+        android:paddingLeft="16dp"
+        android:textAlignment="textStart"
+        android:layout_gravity="start"
+        android:drawablePadding="65dp"/>
+
+    <Button
+        android:id="@+id/help"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@id/accountinformation"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:text="About Aplication"
+        android:paddingLeft="16dp"
+        android:textAlignment="textStart"
+        android:layout_gravity="start"
+        android:drawablePadding="65dp"/>
+
+    <Button
+        android:id="@+id/reg4agent"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@id/help"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:text="Regist For Agent"
+        android:paddingLeft="16dp"
+        android:textAlignment="textStart"
+        android:layout_gravity="start"
+        android:drawablePadding="65dp"/>
+
+    <Button
+        android:id="@+id/signout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@id/reg4agent"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:text="Sign Out"
+        android:paddingLeft="16dp"
+        android:textAlignment="textStart"
+        android:layout_gravity="start"
+        android:drawablePadding="65dp"/>
+
+
+
+
+</RelativeLayout>

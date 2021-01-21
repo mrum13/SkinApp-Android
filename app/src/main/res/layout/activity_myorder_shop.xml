@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Myorder">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/barmaorder"
+            layout="@layout/barmyorder"/>
+
+    <TextView
+        android:id="@+id/txalmpengirim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/barmaorder"
+        android:layout_marginTop="23dp"
+        android:textSize="24dp"
+        android:textColor="#000"
+        android:paddingLeft="16dp"
+        android:text="Alamat Pengirim"
+        />
+
+    <TextView
+        android:id="@+id/rmhorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txalmpengirim"
+        android:layout_marginTop="15dp"
+        android:textSize="14sp"
+        android:textColor="#000"
+        android:paddingLeft="16dp"
+        android:text="Rumah"
+        />
+
+    <TextView
+        android:id="@+id/utama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/rmhorder"
+        android:layout_marginLeft="31dp"
+        android:text="Utama"
+        android:textSize="14sp"
+        android:layout_marginTop="15dp"
+        android:textAppearance="@style/some_id"
+        android:layout_below="@+id/txalmpengirim"
+        android:textColor="#F416B6"/>
+
+    <!-- Nama Pengirim -->
+    <TextView
+        android:id="@+id/nmpengrim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rmhorder"
+        android:layout_marginTop="9dp"
+        android:text="@string/muhammad"
+        android:textAppearance="@style/muhammad"
+        android:paddingLeft="16dp"
+        />
+
+    <TextView
+        android:id="@+id/telp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rmhorder"
+        android:layout_marginTop="9dp"
+        android:text="@string/nomorpengirim"
+        android:textAppearance="@style/nomorpengirim"
+        android:textSize="16dp"
+        android:paddingLeft="5dp"
+        android:layout_toRightOf="@+id/nmpengrim"
+        />
+
+    <TextView
+        android:id="@+id/almpengrim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nmpengrim"
+        android:layout_marginTop="1dp"
+        android:text="@string/alamat"
+        android:textAppearance="@style/alamat"
+        android:paddingLeft="16dp"
+        />
+
+    <TextView
+        android:id="@+id/orderdetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/almpengrim"
+        android:layout_marginTop="25dp"
+        android:text="@string/orderdetail"
+        android:textAppearance="@style/orderdetail"
+        android:paddingLeft="16dp"
+        />
+
+    <TextView
+        android:id="@+id/ttlpengirim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/almpengrim"
+        android:layout_marginTop="25dp"
+        android:text="@string/ttlpengirim"
+        android:textAppearance="@style/ttlpengirim"
+        android:layout_toRightOf="@id/orderdetail"
+        android:paddingLeft="100dp"
+        />
+
+    <!-- $239.00 -->
+    <TextView
+        android:id="@+id/hrgpengirim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/ttlpengirim"
+        android:layout_below="@+id/almpengrim"
+        android:layout_marginTop="25dp"
+        android:text="@string/hrgpengirim61"
+        android:textAppearance="@style/hrgpengirim61" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCheckoutpengirim"
+        android:layout_width="match_parent"
+        android:layout_height="324dp"
+        android:layout_below="@+id/orderdetail"
+        android:layout_marginTop="17dp"
+        android:paddingLeft="25dp"/>
+
+    <TextView
+        android:id="@+id/idorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rvCheckoutpengirim"
+        android:layout_marginTop="25dp"
+        android:text="@string/orderid"
+        android:textAppearance="@style/orderid"
+        android:paddingLeft="25dp"
+        />
+
+    <TextView
+        android:id="@+id/idorder192"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rvCheckoutpengirim"
+        android:layout_marginTop="25dp"
+        android:text="@string/orderid192"
+        android:textAppearance="@style/orderid192"
+        android:layout_toRightOf="@+id/idorder"
+        android:paddingLeft="5dp"
+        />
+
+<!--    <TextView-->
+<!--        android:id="@+id/timeorder"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/idorder"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:text="@string/ordertime"-->
+<!--        android:textAppearance="@style/ordertime"-->
+<!--        android:paddingLeft="25dp"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/timeorder17"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/idorder"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:text="@string/ordertime171117"-->
+<!--        android:textAppearance="@style/ordertime171117"-->
+<!--        android:layout_toRightOf="@+id/timeorder"-->
+<!--        android:paddingLeft="5dp"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/orderpayment"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/timeorder"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:text="@string/orderpaycod"-->
+<!--        android:textAppearance="@style/orderpaycod"-->
+<!--        android:paddingLeft="25dp"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/orderpaycod"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/timeorder"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:text="@string/payordercod"-->
+<!--        android:textAppearance="@style/payordercod"-->
+<!--        android:layout_toRightOf="@+id/orderpayment"-->
+<!--        android:paddingLeft="5dp"-->
+<!--        />-->
+
+    <TextView
+        android:id="@+id/cod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/cod"
+        android:textAppearance="@style/cod"
+        android:textSize="14sp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/idorder192"
+        android:textColor="#F416B6"/>
+
+        <!-- cancel order -->
+        <Button
+            android:id="@+id/cancelorder"
+            android:layout_width="300dp"
+            android:layout_height="44dp"
+            android:layout_below="@+id/cod"
+            android:layout_marginTop="9dp"
+            android:layout_centerInParent="true"
+            android:text="Cancel Order"
+            android:background="@drawable/cancelorder"
+            />
+
+        <!-- continueshop -->
+        <Button
+            android:id="@+id/continueshop"
+            android:layout_width="300dp"
+            android:layout_height="44dp"
+            android:layout_below="@+id/cancelorder"
+            android:layout_marginTop="11dp"
+            android:layout_centerInParent="true"
+            android:text="Continue Shopping"
+            android:background="@drawable/continueshop"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

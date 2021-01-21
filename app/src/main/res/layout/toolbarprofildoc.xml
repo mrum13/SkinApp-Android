@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="62dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/back_icon1"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/backicon"
+            android:backgroundTint="@color/common_google_signin_btn_text_dark"
+            />
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

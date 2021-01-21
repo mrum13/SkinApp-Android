@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.cardmenu.Produkimage">
+
+    <include
+        android:id="@+id/toolbarprodimage"
+        layout="@layout/toolbarprodukimage"/>
+
+    <ScrollView
+        android:layout_below="@id/toolbarprodimage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+         <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tv_menuskincare"
+                  android:text="Nama Produk"
+                  android:textAppearance="@style/tv_oriflame"
+                  android:layout_marginTop="20dp"
+                  android:layout_marginHorizontal="20dp"/>
+
+             <androidx.recyclerview.widget.RecyclerView
+                 android:layout_below="@id/tv_menuskincare"
+                 android:id="@+id/rv_menuskincare"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_marginTop="20dp"
+                 android:layout_marginHorizontal="15dp"/>
+
+         </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/merkskin"-->
+<!--        android:text="ORIFLAME PRODUCT"-->
+<!--        android:textColor="#000"-->
+<!--        android:layout_below="@+id/toolbarprodimage"-->
+<!--        android:layout_marginTop="sp"-->
+<!--        android:layout_marginLeft="24sp"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content" />-->
+
+

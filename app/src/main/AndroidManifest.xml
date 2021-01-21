@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.projskinapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/splash"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activity_Consul"></activity>
+        <activity android:name=".Activity_Profildok" />
+        <activity android:name=".Detailalamat" />
+        <activity android:name=".Myorder" />
+        <activity android:name=".checkoutscreen.FormActivity" />
+        <activity android:name=".RegistAgent" />
+        <activity android:name=".Addproduk" />
+        <activity android:name=".Chatting" />
+        <activity android:name=".home.cardmenu.Produkimage" />
+        <activity android:name=".Forgotpass" />
+        <activity android:name=".Addtocard" />
+        <activity android:name=".Accountmodify" />
+        <activity android:name=".AccountInfo" />
+        <activity android:name=".Account" />
+        <activity android:name=".home.Home" />
+        <activity android:name=".Ordervalidation" />
+        <activity android:name=".checkout.Checkoutpage" />
+        <activity android:name=".Productpage" />
+        <activity android:name=".Search" />
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".Registerform" />
+        <activity android:name=".views.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+    </application>
+
+</manifest>

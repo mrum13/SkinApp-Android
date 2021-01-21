@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.Frag_Home"
+    android:id="@+id/fraghome">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Home"
+        android:textSize="32dp"
+        android:paddingLeft="16dp"
+        android:gravity="top"
+        />
+
+    <ImageView
+        android:id="@+id/skinlongid"
+        android:layout_width="410dp"
+        android:layout_height="128dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="89dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/skinlong"
+        />
+
+    <!-- Find Your Desired Doctor -->
+    <TextView
+        android:id="@+id/find_your_d"
+        android:layout_width="157dp"
+        android:layout_height="16dp"
+        android:layout_below="@+id/skinlongid"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="8dp"
+        android:text="Find Your Desired Doctor"
+        android:textAppearance="@style/find_your_d"
+        android:gravity="top"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/find_your_d"
+        android:layout_marginTop="20dp"
+        />
+
+</RelativeLayout>

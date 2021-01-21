@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Profildok">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imgprofdok"
+            android:layout_width="match_parent"
+            android:layout_height="293dp"
+            android:src="@drawable/illustration"
+            android:scaleType="fitXY"/>
+
+        <include
+            android:id="@+id/toolbarprofildoc"
+            layout="@layout/toolbarprofildoc"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="42dp"
+            android:layout_marginTop="244dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- pro pic -->
+                <ImageView
+                    android:id="@+id/propic"
+                    android:layout_width="88dp"
+                    android:layout_height="107dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/doka"
+                    />
+
+                <!-- Dr. Stella Kane -->
+                <TextView
+                    android:id="@+id/dr_stella_k"
+                    android:layout_width="137dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="46dp"
+                    android:text="@string/dr_jasmine"
+                    android:textAppearance="@style/dr_jasmine"
+                    android:layout_marginLeft="139dp"/>
+
+                <TextView
+                    android:id="@+id/tv_spesialis_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_below="@+id/dr_stella_k"
+                    android:layout_marginLeft="139dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/spesialis"
+                    android:textAppearance="@style/heart_surge" />
+
+                <TextView
+                    android:id="@+id/tv_klinik_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_below="@+id/dr_stella_k"
+                    android:layout_marginTop="2dp"
+                    android:text="Klinik"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/tv_spesialis_detail"
+                    android:textAppearance="@style/heart_surge" />
+
+                <ImageView
+                    android:id="@+id/telp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/dr_stella_k"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/telp"
+                    android:layout_marginLeft="139dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/chat"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/dr_stella_k"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/chat"
+                    android:layout_marginLeft="180dp"
+                    />
+
+                <!-- About Doctor -->
+                <TextView
+                    android:id="@+id/about_docto"
+                    android:layout_width="104dp"
+                    android:layout_height="23dp"
+                    android:layout_below="@+id/propic"
+                    android:layout_marginTop="37dp"
+                    android:text="@string/about_docto"
+                    android:textAppearance="@style/about_docto"
+                    android:layout_marginLeft="24dp"
+                    />
+
+                <!-- Dr. Stella is the top most heart surgeon in Flower Hospital. She has done over 100 successful sugeries within past 3 years. She has achieved several awards for her wonderful contribution in her own field. She’s available for private consultation for given schedules. -->
+                <TextView
+                    android:id="@+id/descdok"
+                    android:layout_width="311dp"
+                    android:layout_height="132dp"
+                    android:layout_below="@+id/about_docto"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="@string/dr_stella_i"
+                    android:textAppearance="@style/dr_stella_i"
+                    android:lineSpacingExtra="4sp"
+                    android:translationY="-2sp"
+                    android:gravity="top"
+                    />
+
+                <!-- Upcoming Schedules -->
+                <TextView
+                    android:id="@+id/upcoming_sc"
+                    android:layout_width="202dp"
+                    android:layout_height="23dp"
+                    android:layout_below="@+id/descdok"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="@string/upcoming_sc"
+                    android:textAppearance="@style/upcoming_sc"
+                    android:lineSpacingExtra="6sp"
+                    android:translationY="-2.8sp"
+                    android:gravity="top"
+                    />
+
+                <!-- Group 20 -->
+                <View
+                    android:id="@+id/group_20"
+                    android:layout_width="325dp"
+                    android:layout_height="87dp"
+                    android:layout_below="@+id/upcoming_sc"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/tgl12"
+                    />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

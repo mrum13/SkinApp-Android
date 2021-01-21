@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".search.Fragsearch"
+    android:id="@+id/fragsearch">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="16dp"
+                android:text="Search"
+                android:textSize="32dp"
+                android:gravity="top"
+                />
+
+            <EditText
+                android:id="@+id/background"
+                android:layout_width="343dp"
+                android:layout_height="43dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="30dp"
+                android:layout_below="@+id/search"
+                android:layout_marginTop="33dp"
+                android:inputType="text"
+                android:maxLines="1"
+                android:imeOptions="actionSend"
+                android:hint="What are you looking for"
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/search_icon"
+                android:background="@drawable/background"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_cari"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/background"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                tools:listitem="@layout/card_search" />
+
+            <!--    <View-->
+            <!--        android:id="@+id/separator"-->
+            <!--        android:layout_width="29dp"-->
+            <!--        android:layout_height="29dp"-->
+            <!--        android:layout_below="@+id/search"-->
+            <!--        android:layout_marginTop="40dp"-->
+            <!--        android:layout_marginLeft="70dp"-->
+            <!--        android:background="@drawable/separator"-->
+            <!--        />-->
+
+            <!--    <TextView-->
+            <!--        android:id="@+id/last_viewed"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_below="@id/background"-->
+            <!--        android:layout_marginTop="32dp"-->
+            <!--        android:layout_marginLeft="16dp"-->
+            <!--        android:text="Last viewed"-->
+            <!--        android:textSize="24dp"-->
+            <!--        android:gravity="top"-->
+            <!--        />-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/found"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="105dp"-->
+<!--                    android:layout_below="@+id/last_viewed"-->
+<!--                    android:layout_marginTop="17dp"-->
+<!--                    android:layout_marginHorizontal="6dp">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:scaleType="centerInside"-->
+<!--                        android:src="@drawable/foundorif" />-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+            <!--    <androidx.cardview.widget.CardView-->
+            <!--        android:id="@+id/lipbalm"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="105dp"-->
+            <!--        android:layout_below="@+id/found"-->
+            <!--        android:layout_marginTop="17dp"-->
+            <!--        android:layout_marginHorizontal="6dp">-->
+
+            <!--        <ImageView-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:scaleType="fitXY"-->
+            <!--            android:src="@drawable/lipbalmorif"/>-->
+            <!--    </androidx.cardview.widget.CardView>-->
+
+            <!--    <TextView-->
+            <!--        android:id="@+id/lastest_sea"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_below="@+id/lipbalm"-->
+            <!--        android:layout_marginTop="45dp"-->
+            <!--        android:text="Lastest Search"-->
+            <!--        android:layout_marginLeft="16dp"-->
+            <!--        android:textSize="24sp"-->
+            <!--        android:textColor="#000"-->
+            <!--        android:gravity="top"-->
+            <!--        />-->
+
+            <!--     <TextView-->
+            <!--        android:id="@+id/clean_all_h"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_below="@id/lipbalm"-->
+            <!--        android:layout_marginTop="51dp"-->
+            <!--        android:text="Clean all history"-->
+            <!--        android:layout_alignParentRight="true"-->
+            <!--        android:layout_marginRight="30dp"-->
+            <!--         android:textColor="#A7A9BE"-->
+            <!--        android:gravity="right|top"-->
+            <!--        />-->
+            <!--        -->
+            <!--     <TextView-->
+            <!--         android:id="@+id/found1"-->
+            <!--         android:layout_width="wrap_content"-->
+            <!--         android:layout_height="wrap_content"-->
+            <!--         android:layout_below="@id/lastest_sea"-->
+            <!--         android:layout_marginTop="17dp"-->
+            <!--         android:layout_marginLeft="24dp"-->
+            <!--         android:text="Foundation"-->
+            <!--         android:textSize="16sp"-->
+            <!--         android:textColor="#A7A9BE"-->
+            <!--         android:gravity="top"-->
+            <!--         />-->
+
+            <!--     <ImageView-->
+            <!--         android:id="@+id/cross1"-->
+            <!--         android:layout_width="11dp"-->
+            <!--         android:layout_height="10dp"-->
+            <!--         android:layout_below="@+id/clean_all_h"-->
+            <!--         android:layout_marginTop="30dp"-->
+            <!--         android:layout_alignParentRight="true"-->
+            <!--         android:layout_marginRight="30dp"-->
+            <!--         android:src="@drawable/cross1"-->
+            <!--         />-->
+
+            <!--      <TextView-->
+            <!--          android:layout_width="wrap_content"-->
+            <!--          android:layout_height="wrap_content"-->
+            <!--          android:layout_below="@id/found1"-->
+            <!--          android:layout_marginTop="17dp"-->
+            <!--          android:layout_marginLeft="24dp"-->
+            <!--          android:text="Lipbalm"-->
+            <!--          android:textSize="16sp"-->
+            <!--          android:textColor="#A7A9BE"-->
+            <!--          android:gravity="top"/>-->
+
+            <!--        <ImageView-->
+            <!--            android:id="@+id/cross2"-->
+            <!--            android:layout_width="11dp"-->
+            <!--            android:layout_height="10dp"-->
+            <!--            android:layout_below="@+id/cross1"-->
+            <!--            android:layout_alignParentRight="true"-->
+            <!--            android:layout_marginTop="25dp"-->
+            <!--            android:layout_marginRight="30dp"-->
+            <!--            android:src="@drawable/cross2" />-->
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardconsuldok">
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        app:cardCornerRadius="6dp"
+        android:layout_marginTop="16dp"
+        android:background="#000000">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"/>
+
+    </androidx.cardview.widget.CardView>
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="325dp"
+        android:layout_height="87dp"
+        android:layout_marginLeft="5dp"
+        app:cardCornerRadius="13dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/dr_stella"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="Dr. Stella"
+                android:textColor="#000"
+                android:layout_toRightOf="@id/dokA"
+                android:layout_marginLeft="24dp"/>
+
+            <TextView
+                android:id="@+id/tv_spesialis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="43dp"
+                android:text="Spesialis"
+                android:lineSpacingExtra="8sp"
+                android:layout_toRightOf="@id/dokA"
+                android:layout_marginLeft="24dp"
+                android:gravity="top"/>
+
+            <TextView
+                android:id="@+id/tv_rumah_sakit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="43dp"
+                android:text="Rumah Sakit"
+                android:lineSpacingExtra="8sp"
+                android:layout_toRightOf="@id/tv_spesialis"
+                android:layout_marginLeft="12dp"
+                android:gravity="top"
+                />
+
+            <ImageView
+                android:id="@+id/dokA"
+                android:layout_width="54dp"
+                android:layout_height="65dp"
+                android:scaleType="centerCrop"/>
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="99dp"
+    android:id="@+id/ygdiorder">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/orderorif"
+        android:src="@drawable/foundorif"
+        android:layout_marginTop="12dp"
+        android:layout_width="87dp"
+        android:layout_height="84dp"
+        />
+
+        <!-- Daniel Wellington -->
+        <TextView
+            android:id="@+id/daniel_well"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/orderorif"
+            android:text="@string/daniel_well"
+            android:textAppearance="@style/daniel_well"
+            />
+
+        <!-- $239.00 -->
+        <TextView
+            android:id="@+id/hrg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@+id/daniel_well"
+            android:gravity="top"
+            android:text="99000"
+            android:textAppearance="@style/some_id" />
+
+        <TextView
+            android:id="@+id/colororder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/color"
+            android:textAppearance="@style/color"
+            android:layout_below="@+id/daniel_well"
+            android:layout_toRightOf="@+id/orderorif"/>
+
+        <TextView
+            android:id="@+id/colorbrown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/brown"
+            android:textAppearance="@style/brown"
+            android:layout_below="@+id/daniel_well"
+            android:layout_toRightOf="@+id/colororder"/>
+
+        <TextView
+            android:id="@+id/sizeorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sizeorder"
+            android:textAppearance="@style/sizeorder"
+            android:layout_below="@+id/colororder"
+            android:layout_toRightOf="@+id/orderorif"/>
+
+        <TextView
+            android:id="@+id/jmlsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/onesize"
+            android:textAppearance="@style/onesize"
+            android:layout_below="@+id/colororder"
+            android:layout_toRightOf="@+id/sizeorder"/>
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quantityorder"
+            android:textAppearance="@style/quantityorder"
+            android:layout_below="@+id/jmlsize"
+            android:layout_toRightOf="@+id/orderorif"/>
+
+        <TextView
+            android:id="@+id/jmlquantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jmlquantity"
+            android:textAppearance="@style/jmlquantity"
+            android:layout_below="@+id/jmlsize"
+            android:layout_toRightOf="@+id/quantity"/>
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+
+
+
+

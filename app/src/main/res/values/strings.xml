@@ -1,0 +1,420 @@
+<resources>
+    <string name="app_name">ProjSkinApp</string>
+
+    <string name="dont_have_">
+
+Dont have a account?
+</string>
+
+    <string name="let_s_get_s">
+
+Lets Get Started
+</string>
+
+    <string name="create_an_n">
+
+Create an new account
+</string>
+
+    <!-- strings regform.xml -->
+    <string name="have_a_acco">
+
+have a account?
+</string>
+
+    <!-- strings.xml -->
+    <string name="find_your_d">
+
+Find Your Desired Doctor
+</string>
+
+    <!-- strings consul.xml -->
+    <string name="top_doctors">
+
+Top Doctors
+</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- strings.xml -->
+    <string name="New">
+
+New
+</string>
+
+    <!-- strings.xml -->
+    <string name="usd_999">
+
+USD 999
+</string>
+
+    <!-- strings.xml -->
+    <string name="x1">
+
+x1
+</string>
+
+    <!-- strings.xml -->
+    <string name="dr_jasmine">
+
+Nama Dokter
+</string>
+
+    <!-- strings.xml -->
+    <string name="spesialis">
+
+Spesialis
+</string>
+
+
+    <!-- strings.xml -->
+    <string name="about_docto">
+
+About Doctor
+</string>
+
+    <!-- strings.xml -->
+    <string name="dr_stella_i">
+
+Dr. Stella is the top most heart surgeon in Flower \nHospital. She has done over 100 successful sugeries \nwithin past 3 years. She has achieved several\nawards for her wonderful contribution in her own \nfield. She\u00E2\u0080\u0099s available for private consultation for\ngiven schedules.
+</string>
+
+    <!-- strings.xml -->
+    <string name="upcoming_sc">
+
+Upcoming Schedules
+</string>
+
+    <!-- strings.xml -->
+    <string name="evelyn">
+
+Nama depan
+</string>
+
+    <!-- strings.xml -->
+    <string name="wilson">
+
+Nama belakang
+</string>
+
+    <!-- strings.xml -->
+    <string name="some_id">
+
+Nomor HP
+</string>
+
+    <!-- strings.xml -->
+    <string name="vanderbilt_">
+
+Alamat
+</string>
+
+    <!-- strings.xml -->
+    <string name="kec">
+
+Kecamatan
+</string>
+
+    <!-- strings.xml -->
+    <string name="kab">
+
+Kabupaten
+</string>
+
+    <!-- strings.xml -->
+    <string name="kodpos">
+
+Kode Pos
+</string>
+
+    <!-- strings.xml -->
+    <string name="kota">
+
+Kota
+</string>
+
+    <!-- strings.xml -->
+    <string name="order_detai">
+
+ORDER DETAILS
+</string>
+
+    <!-- strings.xml -->
+    <string name="total_261_0">
+
+Total:     $261.00
+</string>
+
+    <!-- strings.xml -->
+    <string name="order_id_19">
+
+Order ID: 192837464KSLK
+</string>
+
+    <!-- strings.xml -->
+    <string name="order_time_">
+
+Order Time: 17/11/2017 14:35
+</string>
+
+    <!-- strings.xml -->
+    <string name="delivery_ad">
+
+Delivery Address: 514 S. Magnolia St., Orlando, FL 32806
+</string>
+
+    <!-- strings.xml -->
+    <string name="payment_met">
+
+Payment Method: Credit or Debit Card
+</string>
+
+    <!-- strings order1card.xml -->
+    <string name="daniel_well">
+
+Daniel Wellington
+</string>
+
+    <!-- hrgorder.xml -->
+    <string name="hrg">
+
+Rp99.00
+</string>
+
+    <!-- strings.xml -->
+    <string name="am">
+
+10:09 AM
+</string>
+
+    <!-- strings.xml -->
+    <string name="lets_meet">
+
+Lets Meet
+</string>
+
+    <!-- strings colorMyOrder.xml -->
+    <string name="color">
+
+Color :
+</string>
+
+    <!-- strings brownMyOrder.xml -->
+    <string name="brown">
+
+Brown
+</string>
+
+    <!-- strings brownMyOrder.xml -->
+    <string name="sizeorder">
+
+Size :
+</string>
+
+    <!-- strings brownMyOrder.xml -->
+    <string name="onesize">
+
+One Size
+</string>
+
+    <!-- strings brownMyOrder.xml -->
+    <string name="quantityorder">
+
+Quantity :
+</string>
+
+    <!-- strings brownMyOrder.xml -->
+    <string name="jmlquantity">
+
+1
+</string>
+
+    <!-- strings MyOrder.xml -->
+    <string name="muhammad">
+
+Muhammad
+</string>
+
+    <!-- strings MyOrder.xml -->
+    <string name="nomorpengirim">
+
+(085342897012)
+</string>
+
+    <!-- strings MyOrder.xml -->
+    <string name="alamat">
+
+jl.Pengayoman, Samata Gowa, Sulsel
+</string>
+
+    <!-- strings MyOrder.xml -->
+    <string name="orderdetail">
+
+ORDER DETAIL
+</string>
+
+    <!-- strings MyOrder.xml -->
+    <string name="ttlpengirim">
+
+Total :
+</string>
+
+    <!-- strings MyOrder.xml -->
+    <string name="hrgpengirim61">
+
+61.000
+</string>
+
+    <!-- strings MyOrder.xml -->
+    <string name="orderid">
+
+Order ID:
+</string>
+
+    <!-- strings MyOrder.xml -->
+    <string name="orderid192">
+
+192837464KSLK
+</string>
+
+
+    <!-- strings Ordertime.xml -->
+    <string name="ordertime">
+
+Order Time:
+</string>
+
+    <!-- strings Ordertime171017.xml -->
+    <string name="ordertime171117">
+
+17/11/2017 14:35
+</string>
+
+    <!-- strings Orderpayment.xml -->
+    <string name="orderpaycod">
+
+Order Paayment:
+</string>
+
+    <!-- strings OrderPayment.xml -->
+    <string name="payordercod">
+
+COD
+</string>
+
+    <!-- strings OrderPayment.xml -->
+    <string name="cod">
+
+COD
+</string>
+
+
+    <!-- strings Alamatdetail.xml -->
+    <string name="rumah">
+
+Rumah
+</string>
+
+    <!-- strings Alamatdetail.xml -->
+    <string name="nama">
+
+Nama Pengirim
+</string>
+
+    <!-- strings Alamatdetail.xml -->
+    <string name="muh">
+
+Muhammad
+</string>
+
+    <!-- strings Alamatdetail.xml -->
+    <string name="detailalm">
+
+Alamat
+</string>
+
+    <!-- strings Alamatdetail.xml -->
+    <string name="alamatdetail">
+
+jl.Pengayoman,Samata,Gowa,SULSEL,11101
+</string>
+
+    <!-- strings Alamatdetail.xml -->
+    <string name="kodepos">
+
+Kode Pos
+</string>
+
+    <!-- strings Alamatdetail.xml -->
+    <string name="kdpos11">
+
+11101
+</string>
+
+    <!-- strings Alamatdetail.xml -->
+    <string name="nopenerima">
+
+Nomor Telepon Penerima
+</string>
+
+    <!-- strings Alamatdetail.xml -->
+    <string name="nope085">
+
+085342897012
+</string>
+
+
+    <!-- strings Account Info.xml -->
+    <string name="alamatakun">
+
+jl.Pengayoman,Samata,Gowa,SULSEL
+</string>
+
+    <!-- strings Account Info.xml -->
+    <string name="kdpos">
+
+11101
+</string>
+
+    <!-- strings Account Info.xml -->
+    <string name="muhm">
+
+Muhammad
+</string>
+
+    <!-- strings Account Info.xml -->
+    <string name="muhm_ad">
+
+Muhammad@gmail.com
+</string>
+
+    <!-- strings Account Info.xml -->
+    <string name="phone085">
+
+085342897012
+</string>
+
+    <!-- strings Account Info.xml -->
+    <string name="pass">
+
+********
+</string>
+
+    <!-- strings Chat.xml -->
+    <string name="lets_hangout">
+
+Lets Hangouts
+</string>
+
+    <!-- strings Chat.xml -->
+    <string name="namaProdukDetail">
+        The ONE ILLUSKIN AQUABOOST FOUNDATION SSPF 20
+    </string>
+
+    <string name="desc">
+        color: cream\n
+        size: one size\n
+        quantity: 1
+    </string>
+
+</resources>

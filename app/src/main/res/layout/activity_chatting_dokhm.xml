@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Chatting">
+
+    <include
+        android:id="@+id/barchat"
+       layout="@layout/barchat"/>
+
+    <ImageView
+        android:id="@+id/chat1"
+        android:layout_width="280dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/barchat"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="118dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/chat1"
+        />
+
+    <!-- Lets Meet -->
+    <TextView
+        android:id="@+id/lets_hangout"
+        android:layout_width="135dp"
+        android:layout_height="26.23dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="130dp"
+        android:layout_below="@+id/barchat"
+        android:layout_marginTop="35dp"
+        android:text="@string/lets_hangout"
+        android:textAppearance="@style/lets_hangout"
+        android:gravity="top"
+        />
+
+    <!-- 10:09 AM -->
+    <TextView
+        android:id="@+id/am"
+        android:layout_width="64dp"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="292dp"
+        android:layout_marginTop="85dp"
+        android:text="@string/am"
+        android:textAppearance="@style/am"
+        android:gravity="top"
+        />
+
+    <!-- Rectangle 5 -->
+    <View
+        android:id="@+id/chat2"
+        android:layout_width="209dp"
+        android:layout_height="47dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="13dp"
+        android:layout_below="@+id/chat1"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/chat2"
+        />
+
+    <!-- Lets Meet -->
+    <TextView
+        android:id="@+id/lets_meet"
+        android:layout_width="135dp"
+        android:layout_height="26.23dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="22dp"
+        android:layout_below="@+id/chat1"
+        android:layout_marginTop="27dp"
+        android:text="@string/lets_meet"
+        android:textAppearance="@style/lets_meet"
+        android:gravity="top"
+        />
+
+    <!-- 10:09 AM -->
+    <TextView
+        android:id="@+id/aam"
+        android:layout_width="64dp"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="150dp"
+        android:layout_below="@+id/chat1"
+        android:layout_marginTop="27dp"
+        android:text="@string/am"
+        android:textAppearance="@style/am"
+        android:gravity="top"
+        />
+
+    <ImageView
+        android:id="@+id/gbr_linechat"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/line37"/>
+
+    <ImageView
+        android:id="@+id/gbr_kamerachat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gbr_linechat"
+        android:layout_alignTop="@+id/gbr_linechat"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="18dp"
+        android:src="@drawable/kamerachat"/>
+
+    <!-- Chat Form -->
+    <EditText
+        android:id="@+id/usrname"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginHorizontal="34dp"
+        android:layout_below="@+id/gbr_linechat"
+        android:layout_alignTop="@id/gbr_kamerachat"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/bagemailmodif"
+        android:hint="Type Message..."
+        android:layout_toRightOf="@id/gbr_kamerachat"
+        android:paddingLeft="10dp"
+        />
+
+    <ImageButton
+        android:id="@+id/sendchat"
+        android:layout_width="wrap_content"
+        android:layout_height="11dp"
+        android:src="@drawable/ic_baseline_arrow_forward_24"
+        android:layout_below="@id/gbr_kamerachat"
+        android:layout_toRightOf="@id/gbr_kamerachat"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="280dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="570dp"/>
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="41dp"
+        android:src="@drawable/record_btn"
+        android:layout_below="@id/gbr_kamerachat"
+        android:layout_toRightOf="@id/usrname"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="320dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="560dp"/>
+
+
+
+</RelativeLayout>

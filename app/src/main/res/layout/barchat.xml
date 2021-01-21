@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#40BFFF">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/gbr_profilchat"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/circlevalid" />
+
+            <TextView
+                android:id="@+id/dr_travel"
+                android:layout_toRightOf="@id/gbr_profilchat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Muhammad"
+                android:textAppearance="@style/muhmmd"
+                android:gravity="top"
+                android:layout_marginLeft="10dp"/>
+
+    </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>
