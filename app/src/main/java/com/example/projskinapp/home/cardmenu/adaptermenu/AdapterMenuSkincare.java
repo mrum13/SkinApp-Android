@@ -15,6 +15,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.projskinapp.Productpage;
 import com.example.projskinapp.R;
+import com.example.projskinapp.home.cardmenu.Produkimage;
 import com.example.projskinapp.home.cardmenu.viewmodelmenu.ViewModelMenuSkincare;
 import com.example.projskinapp.models.Dokter;
 import com.example.projskinapp.models.Produk;
@@ -54,6 +55,7 @@ public class AdapterMenuSkincare extends RecyclerView.Adapter<AdapterMenuSkincar
                 Intent keDetailProduk = new Intent(holder.itemView.getContext(), Productpage.class);
                 keDetailProduk.putExtra("nama_produk", data.getNm_prod());
                 holder.itemView.getContext().startActivity(keDetailProduk);
+                ((Produkimage)holder.itemView.getContext()).finish();
             }
         });
     }

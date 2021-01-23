@@ -7,6 +7,7 @@
     tools:context=".login.LoginActivity">
 
     <RelativeLayout
+        android:id="@+id/layout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -96,6 +97,14 @@
             android:paddingBottom="10dp"
             android:text="Sign In"
             android:textColor="#FFFFFF" />
+
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="250dp"
+            />
 
         <View
             android:id="@+id/line_37"
@@ -207,8 +216,5 @@
             android:lineSpacingExtra="0sp"
             android:gravity="center_horizontal|top"
             android:layout_marginBottom="124dp"/>
-
-
     </RelativeLayout>
-
 </ScrollView>

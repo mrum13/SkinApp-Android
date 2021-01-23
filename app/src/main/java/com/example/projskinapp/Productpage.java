@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,7 @@ public class Productpage extends AppCompatActivity implements View.OnClickListen
     private List<Produk> listProduk;
     private Produk[] detailProduk;
     private int harga,total,quantity;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +41,18 @@ public class Productpage extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_productpage);
 
         inisialisasiObjek();
+        hideProgressBar();
         btnAddToCart.setVisibility(View.GONE);
         getIncomingIntent();
         btnAddToCart.setOnClickListener(this);
+    }
+
+    private void showProgressBar(){
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    private void hideProgressBar(){
+        progressBar.setVisibility(View.GONE);
     }
 
     private void inisialisasiObjek(){
@@ -51,12 +62,14 @@ public class Productpage extends AppCompatActivity implements View.OnClickListen
         btnAddToCart = findViewById(R.id.btn_addtocart);
         namaProdukDetail = findViewById(R.id.nama_produk_detail);
         hargaProdukDetail = findViewById(R.id.harga_produk);
+        progressBar = findViewById(R.id.progress_circular);
     }
 
     private void getIncomingIntent(){
         if(getIntent().hasExtra("nama_produk")) {
             namaProduk = getIntent().getStringExtra("nama_produk");
 
+            showProgressBar();
             Call<ProdukResponse> call = RetrofitClient.getInstance().getApi().detailProduk(namaProduk);
             call.enqueue(new Callback<ProdukResponse>() {
                 @Override
@@ -65,10 +78,11 @@ public class Productpage extends AppCompatActivity implements View.OnClickListen
                     if (!produkResponse.isError()){
                         listProduk = response.body().getProduk();
                         if (listProduk == null) {
+                            hideProgressBar();
                             merkProdukDetail.setText("Data tidak ada");
-
                         }
                         else {
+                            hideProgressBar();
                             detailProduk = listProduk.toArray(new Produk[0]);
                             merkProdukDetail.setText(detailProduk[0].getMerk_prod());
                             namaProdukDetail.setText(detailProduk[0].getNm_prod());
@@ -97,7 +111,7 @@ public class Productpage extends AppCompatActivity implements View.OnClickListen
 
                 @Override
                 public void onFailure(Call<ProdukResponse> call, Throwable t) {
-
+                    hideProgressBar();
                 }
             });
         }
@@ -109,22 +123,28 @@ public class Productpage extends AppCompatActivity implements View.OnClickListen
     }
 
     private void prosesCart(){
+        showProgressBar();
         Call<DefaultResponse> call= RetrofitClient.getInstance().getApi().addToCart(namaProduk,merkProduk,quantityProduk,hargaProduk,totalProduk);
         call.enqueue(new Callback<DefaultResponse>() {
             @Override
             public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {
                 if(response.code()==201){
                     DefaultResponse dr = response.body();
-                    Toast.makeText(Productpage.this, dr.getMsg(),Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(Productpage.this, Addtocard.class));
+                    hideProgressBar();
+                    Intent lanjut = new Intent(Productpage.this, Addtocard.class);
+                    lanjut.putExtra("merk",merkProduk);
+                    startActivity(lanjut);
+                    finish();
                 }
                 else if (response.code()==422){
+                    hideProgressBar();
                     Toast.makeText(Productpage.this,"Produk gagal ditambahkan",Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<DefaultResponse> call, Throwable t) {
+                hideProgressBar();
                 Toast.makeText(Productpage.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });

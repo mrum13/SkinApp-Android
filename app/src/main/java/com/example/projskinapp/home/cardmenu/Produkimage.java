@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +39,7 @@ public class Produkimage extends AppCompatActivity implements View.OnClickListen
     private TextView tvNmProduk;
     private ImageView btnBack;
     private AdapterMenuSkincare adapterMenuSkincare;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,7 @@ public class Produkimage extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_produkimage);
 
         inisialisasiObjek();
+        hideProgressBar();
         getIncomingIntent();
     }
 
@@ -52,6 +55,7 @@ public class Produkimage extends AppCompatActivity implements View.OnClickListen
         tvNmProduk = findViewById(R.id.tv_menuskincare);
         btnBack = findViewById(R.id.back_icon);
         rvMenuSkincare = findViewById(R.id.rv_menuskincare);
+        progressBar = findViewById(R.id.progress_circular);
     }
 
     @Override
@@ -62,6 +66,14 @@ public class Produkimage extends AppCompatActivity implements View.OnClickListen
                 finish();
             }
         });
+    }
+
+    private void showProgressBar(){
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    private void hideProgressBar(){
+        progressBar.setVisibility(View.GONE);
     }
 
     private void getIncomingIntent(){
@@ -91,6 +103,7 @@ public class Produkimage extends AppCompatActivity implements View.OnClickListen
     }
 
     private void loadData(String nama_merk){
+        showProgressBar();
         Call<ProdukResponse> call = RetrofitClient.getInstance().getApi().allProduk(nama_merk);
         call.enqueue(new Callback<ProdukResponse>() {
             @Override
@@ -98,22 +111,18 @@ public class Produkimage extends AppCompatActivity implements View.OnClickListen
                 ProdukResponse produkResponse =response.body();
                 if (!produkResponse.isError()){
                     listProduk = response.body().getProduk();
+                    hideProgressBar();
                     setAdapterProduk();
-//                    if(listProduk==null){
-//                        tvNmProduk.setText("Data belum masuk");
-//                    }
-//                    else {
-//                        tvNmProduk.setText(listProduk.);
-//                    }
                 }
                 else {
+                    hideProgressBar();
                     Toast.makeText(Produkimage.this, "Data tidak ada",Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ProdukResponse> call, Throwable t) {
-
+                hideProgressBar();
             }
         });
     }

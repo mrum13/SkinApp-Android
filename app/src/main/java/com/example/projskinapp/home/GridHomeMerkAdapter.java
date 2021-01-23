@@ -50,6 +50,7 @@ public class GridHomeMerkAdapter extends RecyclerView.Adapter<GridHomeMerkAdapte
                 Intent kedetail = new Intent(context, Produkimage.class);
                 kedetail.putExtra("tvNamaProduk", list.getHomeNames());
                 context.startActivity(kedetail);
+
             }
         });
     }

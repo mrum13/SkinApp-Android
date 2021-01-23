@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText mail, pass;
     ImageView eye;
     private String email,password;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,8 @@ public class LoginActivity extends AppCompatActivity {
         mail=findViewById(R.id.email_form);
         pass=findViewById(R.id.pass_form);
         eye=findViewById(R.id.eye);
+        progressBar = findViewById(R.id.progress_circular);
+        progressBar.setVisibility(View.GONE);
 
         // forgot_pass
         forgot_pass = (TextView) findViewById(R.id.forgot_pass);
@@ -73,6 +77,7 @@ public class LoginActivity extends AppCompatActivity {
         masuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progressBar.setVisibility(View.VISIBLE);
                 email = mail.getText().toString();
                 password =pass.getText().toString();
 
@@ -82,21 +87,24 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                         LoginResponse loginResponse =response.body();
                         if (!loginResponse.isError()){
+                            progressBar.setVisibility(View.GONE);
                             SharedPrefManager.getInstance(LoginActivity.this).saveUser(loginResponse.getUser());
-                            Toast.makeText(LoginActivity.this, "Login Berhasil",Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this, "Login Berhasil",Toast.LENGTH_SHORT).show();
 
                             Intent keHome = new Intent(LoginActivity.this, Home.class);
                             keHome.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(keHome);
                         }
                         else {
-                            Toast.makeText(LoginActivity.this, loginResponse.getMessage(),Toast.LENGTH_LONG).show();
+                            progressBar.setVisibility(View.GONE);
+                            Toast.makeText(LoginActivity.this, loginResponse.getMessage(),Toast.LENGTH_SHORT).show();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<LoginResponse> call, Throwable t) {
-                        Toast.makeText(LoginActivity.this, "Gagal Koneksi",Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility(View.GONE);
+                        Toast.makeText(LoginActivity.this, "Gagal Koneksi",Toast.LENGTH_SHORT).show();
                     }
                 });
             }

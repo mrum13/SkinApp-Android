@@ -1,4 +1,4 @@
-package com.example.projskinapp.views;
+package com.example.projskinapp.splashscreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".home.cardmenu.Produkimage">
 
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        />
+
     <include
         android:id="@+id/toolbarprodimage"
         layout="@layout/toolbarprodukimage"/>

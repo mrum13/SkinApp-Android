@@ -38,7 +38,7 @@
         <activity android:name=".Search" />
         <activity android:name=".login.LoginActivity" />
         <activity android:name=".Registerform" />
-        <activity android:name=".views.SplashActivity">
+        <activity android:name=".splashscreen.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

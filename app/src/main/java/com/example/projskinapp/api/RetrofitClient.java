@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
     private static final String AUTH = "Basic "+ android.util.Base64.encodeToString(("skinapp:123456").getBytes(), Base64.NO_WRAP);
-    private static final String BASE_URL="http://a7823bf18ca6.ngrok.io/SkinAppApi/public/";
+    private static final String BASE_URL="http://3118c5cbc75e.ngrok.io/SkinAppApi/public/";
     private static  RetrofitClient mInstance;
     private Retrofit retrofit;
 
