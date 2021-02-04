@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Myorder">
+    tools:context=".checkproduct.MyOrder">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,6 +13,14 @@
         <include
             android:id="@+id/barmaorder"
             layout="@layout/barmyorder"/>
+
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="300dp"
+            />
 
     <TextView
         android:id="@+id/txalmpengirim"
@@ -26,72 +34,65 @@
         android:text="Alamat Pengirim"
         />
 
-    <TextView
-        android:id="@+id/rmhorder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txalmpengirim"
-        android:layout_marginTop="15dp"
-        android:textSize="14sp"
-        android:textColor="#000"
-        android:paddingLeft="16dp"
-        android:text="Rumah"
-        />
+        <RelativeLayout
+            android:id="@+id/lyt_alamat"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txalmpengirim">
 
-    <TextView
-        android:id="@+id/utama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/rmhorder"
-        android:layout_marginLeft="31dp"
-        android:text="Utama"
-        android:textSize="14sp"
-        android:layout_marginTop="15dp"
-        android:textAppearance="@style/some_id"
-        android:layout_below="@+id/txalmpengirim"
-        android:textColor="#F416B6"/>
+            <TextView
+                android:id="@+id/rmhorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#000"
+                android:paddingLeft="16dp"
+                android:text="Rumah"
+                />
+            <!-- Nama Pengirim -->
+            <TextView
+                android:id="@+id/nmpengrim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rmhorder"
+                android:layout_marginTop="9dp"
+                android:text="Nama Pembeli"
+                android:textAppearance="@style/muhammad"
+                android:paddingLeft="16dp"
+                android:textStyle="bold"/>
 
-    <!-- Nama Pengirim -->
-    <TextView
-        android:id="@+id/nmpengrim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rmhorder"
-        android:layout_marginTop="9dp"
-        android:text="@string/muhammad"
-        android:textAppearance="@style/muhammad"
-        android:paddingLeft="16dp"
-        />
+            <TextView
+                android:id="@+id/telp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rmhorder"
+                android:layout_marginTop="9dp"
+                android:text="081234567890"
+                android:textAppearance="@style/nomorpengirim"
+                android:textSize="16dp"
+                android:paddingLeft="5dp"
+                android:layout_toRightOf="@+id/nmpengrim"
+                />
 
-    <TextView
-        android:id="@+id/telp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rmhorder"
-        android:layout_marginTop="9dp"
-        android:text="@string/nomorpengirim"
-        android:textAppearance="@style/nomorpengirim"
-        android:textSize="16dp"
-        android:paddingLeft="5dp"
-        android:layout_toRightOf="@+id/nmpengrim"
-        />
+            <TextView
+                android:id="@+id/almpengrim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nmpengrim"
+                android:layout_marginTop="1dp"
+                android:text="Alamat pembeli"
+                android:textAppearance="@style/alamat"
+                android:paddingLeft="16dp" />
 
-    <TextView
-        android:id="@+id/almpengrim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/nmpengrim"
-        android:layout_marginTop="1dp"
-        android:text="@string/alamat"
-        android:textAppearance="@style/alamat"
-        android:paddingLeft="16dp"
-        />
+        </RelativeLayout>
+
 
     <TextView
         android:id="@+id/orderdetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/almpengrim"
+        android:layout_below="@+id/lyt_alamat"
         android:layout_marginTop="25dp"
         android:text="@string/orderdetail"
         android:textAppearance="@style/orderdetail"
@@ -102,7 +103,7 @@
         android:id="@+id/ttlpengirim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/almpengrim"
+        android:layout_below="@+id/lyt_alamat"
         android:layout_marginTop="25dp"
         android:text="@string/ttlpengirim"
         android:textAppearance="@style/ttlpengirim"
@@ -112,20 +113,30 @@
 
     <!-- $239.00 -->
     <TextView
-        android:id="@+id/hrgpengirim"
+        android:id="@+id/rp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@+id/ttlpengirim"
-        android:layout_below="@+id/almpengrim"
+        android:layout_below="@+id/lyt_alamat"
         android:layout_marginTop="25dp"
-        android:text="@string/hrgpengirim61"
+        android:text="Rp."
         android:textAppearance="@style/hrgpengirim61" />
+
+        <TextView
+            android:id="@+id/hrgpengirim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rp"
+            android:layout_below="@+id/lyt_alamat"
+            android:layout_marginTop="25dp"
+            android:text="Total Harga"
+            android:textAppearance="@style/hrgpengirim61" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCheckoutpengirim"
         android:layout_width="match_parent"
-        android:layout_height="324dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/orderdetail"
         android:layout_marginTop="17dp"
         android:paddingLeft="25dp"/>

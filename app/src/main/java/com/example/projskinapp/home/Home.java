@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 
+import com.example.projskinapp.checkproduct.MyOrder;
 import com.example.projskinapp.R;
 import com.example.projskinapp.Registerform;
 import com.example.projskinapp.fragment.FragmentAccount;
@@ -69,7 +70,7 @@ public class Home extends AppCompatActivity implements BottomNavigationView.OnNa
                 fragment = new Fragsearch();
                 break;
             case R.id.shop:
-//                fragment = new Fragcheckout();
+                fragment = new MyOrder();
                 break;
             case R.id.cont: 
                 fragment = new FragmentAccount();

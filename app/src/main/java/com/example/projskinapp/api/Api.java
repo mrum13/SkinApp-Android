@@ -4,6 +4,7 @@ import com.example.projskinapp.models.DefaultResponse;
 import com.example.projskinapp.models.DokterResponse;
 import com.example.projskinapp.models.LoginResponse;
 import com.example.projskinapp.models.ProdukResponse;
+import com.example.projskinapp.models.UserResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -28,8 +29,15 @@ public interface Api {
             @Field("password") String password
     );
 
+    @FormUrlEncoded
+    @POST("getUser")
+    Call<UserResponse> getCurrentUser(
+            @Field("user") String user
+    );
+
     @GET("allDokter")
     Call<DokterResponse> getAllDokter();
+
 
     @FormUrlEncoded
     @POST("detailDokter")
@@ -62,6 +70,7 @@ public interface Api {
             @Field("merk_crprod") String merkProduk,
             @Field("quantity_crprod") String quantityProduk,
             @Field("hrg_crprod") String hargaProduk,
-            @Field("total") String totalProduk
+            @Field("total") String totalProduk,
+            @Field("user") String namaUser
     );
 }

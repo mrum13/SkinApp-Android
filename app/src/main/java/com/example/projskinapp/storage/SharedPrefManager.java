@@ -42,7 +42,10 @@ public class SharedPrefManager {
         return new User(
                 sharedPreferences.getInt("id",-1),
                 sharedPreferences.getString("email",null),
-                sharedPreferences.getString("name",null)
+                sharedPreferences.getString("name",null),
+                sharedPreferences.getString("alamat_user",null),
+                sharedPreferences.getString("kodepos_user",null),
+                sharedPreferences.getString("nope_user",null)
         );
     }
 

@@ -20,7 +20,6 @@
         <activity android:name=".Activity_Consul"></activity>
         <activity android:name=".Activity_Profildok" />
         <activity android:name=".Detailalamat" />
-        <activity android:name=".Myorder" />
         <activity android:name=".checkoutscreen.FormActivity" />
         <activity android:name=".RegistAgent" />
         <activity android:name=".Addproduk" />

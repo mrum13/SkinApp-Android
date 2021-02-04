@@ -14,10 +14,13 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.projskinapp.api.RetrofitClient;
+import com.example.projskinapp.home.cardmenu.Produkimage;
 import com.example.projskinapp.login.LoginActivity;
 import com.example.projskinapp.models.DefaultResponse;
 import com.example.projskinapp.models.Produk;
 import com.example.projskinapp.models.ProdukResponse;
+import com.example.projskinapp.models.User;
+import com.example.projskinapp.storage.SharedPrefManager;
 
 import java.util.List;
 
@@ -29,11 +32,12 @@ public class Productpage extends AppCompatActivity implements View.OnClickListen
     private TextView merkProdukDetail,deskripsiProdukDetail,namaProdukDetail,hargaProdukDetail;
     private ImageView gambarProduk;
     private Button btnAddToCart;
-    private String namaProduk,merkProduk,quantityProduk,hargaProduk,totalProduk;
+    private String namaProduk,merkProduk,quantityProduk,hargaProduk,totalProduk,user;
     private List<Produk> listProduk;
     private Produk[] detailProduk;
     private int harga,total,quantity;
     private ProgressBar progressBar;
+    private User dataUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +79,11 @@ public class Productpage extends AppCompatActivity implements View.OnClickListen
                 @Override
                 public void onResponse(Call<ProdukResponse> call, Response<ProdukResponse> response) {
                     ProdukResponse produkResponse =response.body();
-                    if (!produkResponse.isError()){
+                    if (produkResponse.isError()){
+                        hideProgressBar();
+                        Toast.makeText(Productpage.this, "Data tidak ada",Toast.LENGTH_LONG).show();
+                    }
+                    else {
                         listProduk = response.body().getProduk();
                         if (listProduk == null) {
                             hideProgressBar();
@@ -101,11 +109,10 @@ public class Productpage extends AppCompatActivity implements View.OnClickListen
                             harga = Integer.parseInt(hargaProduk);
                             total = harga*quantity;
                             totalProduk = String.valueOf(total);
+                            dataUser = SharedPrefManager.getInstance(Productpage.this).getUser();
+                            user = dataUser.getName();
                             btnAddToCart.setVisibility(View.VISIBLE);
                         }
-                    }
-                    else {
-
                     }
                 }
 
@@ -124,7 +131,7 @@ public class Productpage extends AppCompatActivity implements View.OnClickListen
 
     private void prosesCart(){
         showProgressBar();
-        Call<DefaultResponse> call= RetrofitClient.getInstance().getApi().addToCart(namaProduk,merkProduk,quantityProduk,hargaProduk,totalProduk);
+        Call<DefaultResponse> call= RetrofitClient.getInstance().getApi().addToCart(namaProduk,merkProduk,quantityProduk,hargaProduk,totalProduk,user);
         call.enqueue(new Callback<DefaultResponse>() {
             @Override
             public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {
@@ -137,8 +144,12 @@ public class Productpage extends AppCompatActivity implements View.OnClickListen
                     finish();
                 }
                 else if (response.code()==422){
+                    DefaultResponse dr = response.body();
                     hideProgressBar();
-                    Toast.makeText(Productpage.this,"Produk gagal ditambahkan",Toast.LENGTH_SHORT).show();
+                    Intent lanjut = new Intent(Productpage.this, Addtocard.class);
+                    lanjut.putExtra("merk",merkProduk);
+                    startActivity(lanjut);
+                    finish();
                 }
             }
 

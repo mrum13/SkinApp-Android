@@ -22,16 +22,12 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 
 public class FragmentAccount extends Fragment {
-
     Button signout, reg4agen, Order;
-    FirebaseAuth FSignauth;
     String UserId;
-
     TextView user;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-    //  i   nflate
         View view = inflater.inflate(R.layout.fragment_account, container, false);
 
         signout = view.findViewById(R.id.signout);

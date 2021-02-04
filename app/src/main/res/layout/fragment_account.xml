@@ -34,11 +34,11 @@
 
         <TextView
             android:id="@+id/username"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/account"
             android:layout_marginTop="20dp"
-            android:paddingLeft="80dp"
+            android:layout_toRightOf="@id/item_photo"
             android:layout_marginBottom="8dp"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -46,10 +46,10 @@
 
         <TextView
             android:id="@+id/tipeanggota"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/username"
-            android:paddingLeft="80dp"
+            android:layout_toRightOf="@id/item_photo"
             android:ellipsize="end"
             android:maxLines="2"
             tools:text="Premium Member"

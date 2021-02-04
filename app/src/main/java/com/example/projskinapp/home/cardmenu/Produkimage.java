@@ -102,27 +102,28 @@ public class Produkimage extends AppCompatActivity implements View.OnClickListen
         rvMenuSkincare.setAdapter(adapterMenuSkincare);
     }
 
-    private void loadData(String nama_merk){
+    private void loadData(final String nama_merk){
         showProgressBar();
         Call<ProdukResponse> call = RetrofitClient.getInstance().getApi().allProduk(nama_merk);
         call.enqueue(new Callback<ProdukResponse>() {
             @Override
             public void onResponse(Call<ProdukResponse> call, Response<ProdukResponse> response) {
                 ProdukResponse produkResponse =response.body();
-                if (!produkResponse.isError()){
+                if (produkResponse.isError()){
+                    hideProgressBar();
+                    Toast.makeText(Produkimage.this, "Data tidak ada",Toast.LENGTH_LONG).show();
+                }
+                else {
                     listProduk = response.body().getProduk();
                     hideProgressBar();
                     setAdapterProduk();
-                }
-                else {
-                    hideProgressBar();
-                    Toast.makeText(Produkimage.this, "Data tidak ada",Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ProdukResponse> call, Throwable t) {
                 hideProgressBar();
+                System.out.print(nama_merk);
             }
         });
     }
